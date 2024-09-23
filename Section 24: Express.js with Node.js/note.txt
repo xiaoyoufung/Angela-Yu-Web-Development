@@ -1,0 +1,34 @@
+Creating an Express Server
+1. Create directory.
+2. Create index.js file.
+3. Initialise NPM.
+4. Install the Express package.
+5. Write Server application in index.js.
+6. Start server.
+
+What is Localhost?
+=> when we don't have a server on the internet. We want to host our server locally.
+=> Making our own computer, the server of our website's backend.
+=> https://localhost:3000
+
+What is a Port?
+=> A Door to access your computer
+
+Request Vocab
+GET -> get smth from the server
+POST -> sending resource from the server
+    update method
+PUT -> update smth by replace it
+    -> replace bikecycle with new one
+PATCH -> patch up a resource
+        -> give only wheel to change
+DELETE -> Delete resource
+
+Exercise
+1. Create directory call 3.2 HTTP Request
+2. Create index.js
+3. Initialise NPM
+4. Install the Express package
+5. Write Server application in index.js
+6. Server should be able to handle "/" "/contact" and "/about" endpoints.
+7. Start server
