@@ -1,0 +1,27 @@
+EJS Tags
+<%= variable %>                 JS Output
+<% console.log("hello") %>      JS Execute
+<%- <h1>Hello</h1> %->          Render HTML
+<%% %%>                         Show <% or %>
+<%# This is a comment %>        comment
+<%- include("header.ejs") %>    Insert another EJS file
+
+
+Rendering JS in HTML
+
+let bowl = ["Apples", "Oranges", "Pears"];
+
+app.get("/", (req, res) => {
+    res.render("index.ejs", {fruit: bowl});
+});
+
+index.ejs
+<body>
+    <ul>
+        <% for(let i=0; i<fruits.length; i++) { %>
+            <li>
+                <%= fruits[i] %>
+            </li>
+        <% } %>
+    </ul>
+</body>
