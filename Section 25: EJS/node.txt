@@ -25,3 +25,23 @@ index.ejs
         <% } %>
     </ul>
 </body>
+
+
+
+What if there is no Data?
+<% if (locals.fruits) { %>
+    <ul>
+        <%fruits.foreach((fruit) => { %>
+            <li>
+                <%= fruit %>
+            </li>
+        <% }) %>
+    </ul>
+<% } %>
+
+EJS -> Server
+app.post("/submit", (req,res) => {
+    res.render("index.ejs",
+    { name: req.body["fName"] }
+    );
+});
