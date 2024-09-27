@@ -1,0 +1,22 @@
+JS Object -> JSON
+const jsonData = JSON.stringify(data);
+
+JSON -> JS Object
+const data = JSON.parse(jsonData);
+
+
+API Authentication
+0. No Authentication
+    - safty meature: Rate Limit
+    - IP Address
+1. Basic Authentication
+    - passed in Base64 Encoding 
+    - Taking txt => convert bit 0/1 Encoding to another char
+2. API Key Authoricaiton
+3. Token Based Authentication
+
+Challenge:
+1. Noauth => random
+2. getAll
+3. Filter
+4. Secret particular ID
