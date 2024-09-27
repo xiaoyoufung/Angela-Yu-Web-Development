@@ -31,9 +31,7 @@ app.post("/", async (req, res) => {
 
     const response = await axios.get(`https://bored-api.appbrewery.com/filter?type=${type}&participants=${participants}`);
     const result = response.data;
-
-    var size = Object.keys(result).length;
-    res.render("index.ejs", { data: result[Math.floor(Math.random() * size)] });
+    res.render("index.ejs", { data: result[Math.floor(Math.random() * result.length)] });
 
   } catch(error){
     console.error("Failed to make request:", error.message);
