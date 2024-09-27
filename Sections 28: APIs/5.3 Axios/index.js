@@ -8,6 +8,9 @@ const port = 3000;
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 
+// API Docs
+// https://bored-api.appbrewery.com
+
 // Step 1: Make sure that when a user visits the home page,
 //   it shows a random activity.You will need to check the format of the
 //   JSON data from response.data and edit the index.ejs file accordingly.

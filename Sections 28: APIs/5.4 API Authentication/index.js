@@ -11,6 +11,9 @@ const yourPassword = "1234";
 const yourAPIKey = "2dec6513-d683-484d-9af9-7461a5348638";
 const yourBearerToken = "c0a2cb8b-e945-45c8-87c2-64ffebbf0309";
 
+// API Docs
+// https://secrets-api.appbrewery.com
+
 app.get("/", (req, res) => {
   res.render("index.ejs", { content: "API Response." });
 });
