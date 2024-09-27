@@ -22,10 +22,9 @@ app.get("/noAuth", async (req, res) => {
   //TODO 2: Use axios to hit up the /random endpoint
   try{
     const response = await axios.get("https://secrets-api.appbrewery.com/");
-    const result = response.data;
-    res.render("index.ejs", {content: JSON.stringify(result)} );
+    res.render("index.ejs", {content: JSON.stringify(response.data)} );
   } catch(error){
-    console.log(error.message);
+    res.status(404).send("Error:", error.message)
   }
   
   //The data you get back should be sent to the ejs file as "content"
@@ -52,10 +51,9 @@ app.get("/basicAuth", async (req, res) => {
             password: yourPassword,
           },
         });
-      const result = response.data;
-      res.render("index.ejs", {content: JSON.stringify(result)} );
+      res.render("index.ejs", {content: JSON.stringify(response.data)} );
     } catch(error){
-      console.log(error.message);
+      res.status(404).send("Error:", error.message)
     }
 });
 
@@ -64,11 +62,15 @@ app.get("/apiKey", async (req, res) => {
   //Filter for all secrets with an embarassment score of 5 or greater
   //HINT: You need to provide a query parameter of apiKey in the request.
   try{
-    const response = await axios.get(`https://secrets-api.appbrewery.com/filter?score=5&apiKey=${yourAPIKey}`);
-    const result = response.data;
-    res.render("index.ejs", {content: JSON.stringify(result)} );
+    const response = await axios.get("https://secrets-api.appbrewery.com/filter", {
+      params: {
+        score: 5,
+        apiKey: yourAPIKey,
+      }
+    });
+    res.render("index.ejs", {content: JSON.stringify(response.data)} );
   } catch(error){
-    console.log(error.message);
+    res.status(404).send("Error:", error.message)
   }
 });
 
@@ -91,10 +93,9 @@ app.get("/bearerToken", async (req, res) => {
         Authorization: `Bearer ${yourBearerToken}`
       }
     });
-    const result = response.data;
-    res.render("index.ejs", {content: JSON.stringify(result)} );
+    res.render("index.ejs", {content: JSON.stringify(response.data)} );
   } catch(error){
-    console.log(error.message);
+    res.status(404).send("Error:", error.message)
   }
 });
 
