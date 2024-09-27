@@ -74,6 +74,12 @@ app.get("/apiKey", async (req, res) => {
   }
 });
 
+const config = {
+  headers: {
+    Authorization: `Bearer ${yourBearerToken}`
+  }
+}
+
 app.get("/bearerToken", async (req, res) => {
   //TODO 5: Write your code here to hit up the /secrets/{id} endpoint
   //and get the secret with id of 42
@@ -88,11 +94,7 @@ app.get("/bearerToken", async (req, res) => {
   */
 
   try{
-    const response = await axios.get(`https://secrets-api.appbrewery.com/secrets/42`,{
-      headers: {
-        Authorization: `Bearer ${yourBearerToken}`
-      }
-    });
+    const response = await axios.get(`https://secrets-api.appbrewery.com/secrets/42`,{config});
     res.render("index.ejs", {content: JSON.stringify(response.data)} );
   } catch(error){
     res.status(404).send("Error:", error.message)
