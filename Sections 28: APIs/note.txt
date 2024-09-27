@@ -20,3 +20,15 @@ Challenge:
 2. getAll
 3. Filter
 4. Secret particular ID
+
+Axios
+import axios from "axios";
+app.get("/", async (req, res) => {
+    try{
+        const reponse = await axios.get("https://bored-api...")
+        res.render("index.ejs, { activity: reponse.data });
+    } catch(error){
+        console.log("Failed to make request: ", error);
+        res.status(500).send("Failed to fetch activity.");
+    }
+});
