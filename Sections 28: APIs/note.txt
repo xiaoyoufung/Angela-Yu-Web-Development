@@ -32,3 +32,48 @@ app.get("/", async (req, res) => {
         res.status(500).send("Failed to fetch activity.");
     }
 });
+
+POST
+app.post("/", async (req, res) => {
+    try{
+        await axios.post("URL", body, config);
+        res.sendStatus(201);
+    } catch(error){
+        res.status(404).send(error.reponse.data);
+    }
+});
+
+
+PUT [all the data we wanted to update.]
+app.put("/", async (req, res) => {
+    try{
+        await axios.put("URL", body, config);
+        res.sendStatus(200);
+    } catch (error){
+        res.status(404).send(error.reponse.data);
+    }
+});
+
+
+PATCH [provide any data you wanted to update.]
+app.patch("/", (req, res) => {
+    try{
+        await axios.patch("URL", body, config);
+        res.sendStatus(200);
+    } catch(error){
+        res.sendStatus(404).send(error.reponse.data);
+    }
+});
+
+DELETE only take 2 parameters...
+app.delete("/", async (req, res) => {
+    try{
+        await axios.delete("URL", config);
+        res.sendStatus(200);
+    } catch(error){
+        res.status(404).send(error.reponse.data);
+    }
+});
+
+
+{"message":"Secret with ID 55 has been deleted successfully."}
