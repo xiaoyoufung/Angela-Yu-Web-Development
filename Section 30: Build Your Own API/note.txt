@@ -1,0 +1,18 @@
+Monetised APIs (make income)
+1. Data Collection (Large Collection of data)
+2. Algorithm/ Service (Meature distance, ChatGPT)
+3. Simplified Interface (Order a pizza, call for pizza APIs)
+
+Internal APIs
+
+What make API RESTful
+- HTTP Methods    
+    GET, POST, PUT, PATCH, DELETE
+- JSON Output
+- Client - Server
+- Stateless
+- Resource-Based
+
+//https://nandbox.com/api-ideas-to-make-money-the-ultimate-guide/#:~:text=1%3A%20Charge%20for%20Your%20API,or%20methods%20that%20businesses%20use.
+// https://api-ecosystem.sios.jp/siossolution/?gad_source=1&gbraid=0AAAAADlJx_l5iY2mu-rwozJUbYBIm6OV9&gclid=CjwKCAjw0t63BhAUEiwA5xP54S8QfRooxTd59HOUZL1X2GF6YtgW1ADf9CPgtZ9n7D3iaM6QoVaZmhoCmyYQAvD_BwE
+// https://engineering.mercari.com/blog/entry/20211005-search-api-v2/
