@@ -20,7 +20,7 @@ app.get("/", async (req, res) => {
             user: JSON.stringify(response.data.username),
         });
     } catch(error){
-        res.status(404).send(error.reponse.data);
+        res.status(500).send(error.reponse.data);
     }
 });
 

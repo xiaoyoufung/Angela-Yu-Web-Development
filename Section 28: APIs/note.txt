@@ -77,3 +77,6 @@ app.delete("/", async (req, res) => {
 
 
 {"message":"Secret with ID 55 has been deleted successfully."}
+
+Public API Lists.
+https://github.com/appbrewery/public-api-lists
